@@ -70,6 +70,7 @@ function initializeMobileMenu() {
     });
 
     setActiveNavLink();
+    initializeMobileMenu();
 }
 
 /**
@@ -353,4 +354,54 @@ function setActiveNavLink() {
             }
         });
     }
+}
+
+// 移动端菜单初始化
+function initializeMobileMenu() {
+    // 创建菜单按钮
+    const menuBtn = document.createElement('button');
+    menuBtn.className = 'menu-btn';
+    menuBtn.innerHTML = '<span></span><span></span><span></span>';
+    menuBtn.setAttribute('aria-label', '菜单');
+    document.querySelector('header').appendChild(menuBtn);
+    
+    const nav = document.querySelector('nav ul');
+    
+    // 菜单按钮点击事件
+    menuBtn.addEventListener('click', function(e) {
+        e.stopPropagation(); // 防止事件冒泡
+        this.classList.toggle('active');
+        nav.classList.toggle('show');
+        
+        // 切换aria-expanded状态
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !isExpanded);
+    });
+    
+    // 点击菜单外区域关闭菜单
+    document.addEventListener('click', function(e) {
+        if (!nav.contains(e.target) {
+            menuBtn.classList.remove('active');
+            nav.classList.remove('show');
+            menuBtn.setAttribute('aria-expanded', 'false');
+        }
+    });
+    
+    // 菜单项点击后关闭菜单
+    nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function() {
+            menuBtn.classList.remove('active');
+            nav.classList.remove('show');
+            menuBtn.setAttribute('aria-expanded', 'false');
+        });
+    });
+    
+    // 窗口大小改变时重置菜单状态
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            menuBtn.classList.remove('active');
+            nav.classList.remove('show');
+            menuBtn.setAttribute('aria-expanded', 'false');
+        }
+    });
 }
