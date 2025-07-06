@@ -26,6 +26,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // ==================== 6. 返回顶部按钮 ====================
     setupBackToTopButton();
+    initializeMobileMenu();
+    setActiveNavLink();
 });
 
 /**
@@ -68,11 +70,6 @@ function initializeMobileMenu() {
             menuBtn.setAttribute('aria-expanded', 'false');
         }
     });
-
-    setActiveNavLink();
-    initializeMobileMenu();
-}
-
 /**
  * 设置当前导航链接高亮
  */
@@ -362,37 +359,31 @@ function initializeMobileMenu() {
     const menuBtn = document.createElement('button');
     menuBtn.className = 'menu-btn';
     menuBtn.innerHTML = '<span></span><span></span><span></span>';
-    menuBtn.setAttribute('aria-label', '菜单');
+    menuBtn.setAttribute('aria-label', '切换导航菜单');
     document.querySelector('header').appendChild(menuBtn);
     
-    const nav = document.querySelector('nav ul');
+    const navList = document.querySelector('nav ul');
     
     // 菜单按钮点击事件
     menuBtn.addEventListener('click', function(e) {
-        e.stopPropagation(); // 防止事件冒泡
+        e.stopPropagation();
         this.classList.toggle('active');
-        nav.classList.toggle('show');
-        
-        // 切换aria-expanded状态
-        const isExpanded = this.getAttribute('aria-expanded') === 'true';
-        this.setAttribute('aria-expanded', !isExpanded);
+        navList.classList.toggle('show');
     });
     
-    // 点击菜单外区域关闭菜单
+    // 点击文档其他区域关闭菜单
     document.addEventListener('click', function(e) {
-        if (!nav.contains(e.target) {
+        if (!e.target.closest('nav') && !e.target.closest('.menu-btn')) {
             menuBtn.classList.remove('active');
-            nav.classList.remove('show');
-            menuBtn.setAttribute('aria-expanded', 'false');
+            navList.classList.remove('show');
         }
     });
     
     // 菜单项点击后关闭菜单
-    nav.querySelectorAll('a').forEach(link => {
+    navList.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', function() {
             menuBtn.classList.remove('active');
-            nav.classList.remove('show');
-            menuBtn.setAttribute('aria-expanded', 'false');
+            navList.classList.remove('show');
         });
     });
     
@@ -400,8 +391,7 @@ function initializeMobileMenu() {
     window.addEventListener('resize', function() {
         if (window.innerWidth > 768) {
             menuBtn.classList.remove('active');
-            nav.classList.remove('show');
-            menuBtn.setAttribute('aria-expanded', 'false');
+            navList.classList.remove('show');
         }
     });
 }
