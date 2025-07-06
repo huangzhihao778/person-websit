@@ -68,6 +68,8 @@ function initializeMobileMenu() {
             menuBtn.setAttribute('aria-expanded', 'false');
         }
     });
+
+    setActiveNavLink();
 }
 
 /**
@@ -333,4 +335,22 @@ function throttle(func, limit = 100) {
             }, limit - (Date.now() - lastRan));
         }
     };
+}
+
+// 当前页面高亮
+function setActiveNavLink() {
+    const currentPage = location.pathname.split('/').pop().replace('.html', '');
+    if (currentPage) {
+        const links = document.querySelectorAll('nav a');
+        links.forEach(link => {
+            const linkPage = link.getAttribute('href').replace('.html', '');
+            if (linkPage === currentPage || 
+                (currentPage === 'index' && linkPage === '') ||
+                (currentPage === 'index' && linkPage === 'blog/index')) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    }
 }
