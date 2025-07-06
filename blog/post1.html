@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>花粉俱乐部UI设计背后的思考 | 吴曦浩翔</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="styles/blog.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>吴曦浩翔</h1>
+            <p>艺术设计师 | 华为终端技术有限公司</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="../about.html">关于</a></li>
+                <li><a href="../portfolio.html">作品集</a></li>
+                <li><a href="../contact.html">联系</a></li>
+                <li><a href="index.html">博客</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="single-post">
+        <article>
+            <header class="post-header">
+                <div class="post-meta">
+                    <span class="post-date">2023年10月15日</span>
+                    <span class="post-category">UI设计</span>
+                </div>
+                <h1>花粉俱乐部UI设计背后的思考</h1>
+                <div class="post-thumbnail">
+                    <img src="../images/blog/post1-full.jpg" alt="花粉俱乐部设计">
+                </div>
+            </header>
+
+            <div class="post-content">
+                <p>作为华为终端技术有限公司的设计师，我有幸参与了花粉俱乐部的UI redesign项目。今天我想分享一些设计背后的思考过程。</p>
+
+                <h2>项目背景</h2>
+                <p>花粉俱乐部是华为用户社区的核心平台，拥有数百万活跃用户。随着HarmonyOS的推出和用户群体的扩大，原有的界面设计已经无法满足需求。</p>
+
+                <h2>设计目标</h2>
+                <ul>
+                    <li>强化华为品牌识别度</li>
+                    <li>提升内容可发现性</li>
+                    <li>优化社区互动体验</li>
+                    <li>适配HarmonyOS设计语言</li>
+                </ul>
+
+                <h2>关键设计决策</h2>
+
+                <h3>1. 色彩系统</h3>
+                <p>我们保留了华为标志性的红色(#E60012)作为主色调，但降低了饱和度，使其更易于长时间阅读。同时引入了更柔和的次级配色。</p>
+                <div class="design-sample">
+                    <img src="../images/blog/post1-color.jpg" alt="色彩系统">
+                    <p class="caption">调整后的色彩系统</p>
+                </div>
+
+                <h3>2. 信息架构重组</h3>
+                <p>通过用户调研发现，原有导航结构导致30%的核心功能使用率不足5%。我们重新组织了信息架构：</p>
+                <div class="design-sample">
+                    <img src="../images/blog/post1-ia.jpg" alt="信息架构">
+                    <p class="caption">优化后的信息架构</p>
+                </div>
+
+                <h3>3. 社区互动优化</h3>
+                <p>引入了"轻互动"设计模式，降低用户参与门槛：</p>
+                <ul>
+                    <li>一键表情回帖</li>
+                    <li>渐进式评论框</li>
+                    <li>实时预览功能</li>
+                </ul>
+
+                <h2>成果与反思</h2>
+                <p>上线3个月后的数据显示：</p>
+                <table>
+                    <tr>
+                        <th>指标</th>
+                        <th>提升幅度</th>
+                    </tr>
+                    <tr>
+                        <td>日活跃用户</td>
+                        <td>+22%</td>
+                    </tr>
+                    <tr>
+                        <td>平均停留时长</td>
+                        <td>+35%</td>
+                    </tr>
+                    <tr>
+                        <td>内容发布量</td>
+                        <td>+18%</td>
+                    </tr>
+                </table>
+
+                <p>反思：在初期版本中，我们过于注重视觉一致性而牺牲了一些功能可见性，在后续迭代中通过用户测试逐步优化。</p>
+
+                <div class="post-tags">
+                    <span>标签：</span>
+                    <a href="#">UI设计</a>
+                    <a href="#">用户体验</a>
+                    <a href="#">华为</a>
+                </div>
+            </div>
+        </article>
+
+        <section class="post-navigation">
+            <a href="post2.html" class="prev-post">
+                <span>上一篇</span>
+                <h3>2023年移动端UI设计趋势分析</h3>
+            </a>
+            <a href="post2.html" class="next-post">
+                <span>下一篇</span>
+                <h3>从学生到职业设计师：我的工具演变史</h3>
+            </a>
+        </section>
+
+        <section class="comments">
+            <h2>留言讨论 (3)</h2>
+            <div class="comment-form">
+                <h3>发表评论</h3>
+                <form id="comment-form">
+                    <div class="form-group">
+                        <label for="comment-name">姓名</label>
+                        <input type="text" id="comment-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="comment-email">邮箱 (不会公开)</label>
+                        <input type="email" id="comment-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="comment-content">评论内容</label>
+                        <textarea id="comment-content" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">提交评论</button>
+                </form>
+            </div>
+
+            <div class="comment-list">
+                <div class="comment">
+                    <div class="comment-author">
+                        <img src="../images/blog/avatar1.jpg" alt="用户头像" class="avatar">
+                        <div class="author-info">
+                            <h4>张设计师</h4>
+                            <span class="comment-date">2023年10月16日</span>
+                        </div>
+                    </div>
+                    <div class="comment-content">
+                        <p>非常认同关于色彩系统的调整，高饱和度的品牌色直接用在UI上确实会影响可用性。你们是如何说服品牌团队接受这个调整的？</p>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <div class="comment-author">
+                        <img src="../images/blog/avatar2.jpg" alt="用户头像" class="avatar">
+                        <div class="author-info">
+                            <h4>李产品经理</h4>
+                            <span class="comment-date">2023年10月15日</span>
+                        </div>
+                    </div>
+                    <div class="comment-content">
+                        <p>数据提升很显著！想请教一下，在信息架构重组过程中，你们采用了哪些用户研究方法？</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 吴曦浩翔. 保留所有权利.</p>
+        <div class="social-links">
+            <a href="#"><i class="icon-weibo"></i></a>
+            <a href="#"><i class="icon-behance"></i></a>
+            <a href="#"><i class="icon-dribbble"></i></a>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="js/blog.js"></script>
+    <script src="js/comments.js"></script>
+</body>
+</html>
