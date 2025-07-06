@@ -1,58 +1,117 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <!-- 类似index.html的head部分 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>关于 | 吴曦浩翔</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <!-- 如果是作品集页面 -->
-    <link rel="stylesheet" href="css/lightbox.css">
+    <link rel="stylesheet" href="/person-websit/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    <!-- 类似index.html的header部分 -->
+    <header>
+        <div class="logo">
+            <h1>吴曦浩翔</h1>
+            <p>艺术设计师 | 华为终端技术有限公司</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="about.html" class="active">关于</a></li>
+                <li><a href="portfolio.html">作品集</a></li>
+                <li><a href="contact.html">联系</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main class="about-page">
-        <section class="bio">
-            <div class="bio-image">
+        <section class="about-header">
+            <h1>关于我</h1>
+            <p>设计师、创意思考者、问题解决者</p>
+        </section>
+
+        <section class="about-bio">
+            <div class="about-image img-zoom">
                 <img src="images/avatar.jpg" alt="吴曦浩翔">
             </div>
-            <div class="bio-content">
-                <h2>关于我</h2>
-                <p>我是吴曦浩翔，毕业于深圳大学艺术设计学院，目前就职于华为终端技术有限公司，负责花粉俱乐部的设计工作。</p>
-                <p>专注于用户体验设计、品牌视觉设计和互动媒体设计，致力于创造有温度、有情感的设计作品。</p>
+            
+            <div class="about-content">
+                <h2>个人简介</h2>
+                <p>我是吴曦浩翔，毕业于深圳大学艺术设计学院，目前就职于华为终端技术有限公司，负责花粉俱乐部的设计工作。专注于用户体验设计、品牌视觉设计和互动媒体设计，致力于创造有温度、有情感的设计作品。</p>
                 
-                <h3>教育背景</h3>
-                <p>深圳大学艺术设计学院 - 美术学士学位</p>
-                
-                <h3>工作经历</h3>
-                <ul>
-                    <li>华为终端技术有限公司 - 花粉俱乐部设计师 (202X-至今)</li>
-                    <li>XX设计公司 - 视觉设计师 (202X-202X)</li>
-                </ul>
-                
-                <a href="portfolio.html" class="btn">查看我的作品</a>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2018</div>
+                        <div class="timeline-content card-hover">
+                            <h3>深圳大学艺术设计学院</h3>
+                            <p>美术学士学位，主修视觉传达设计</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2020</div>
+                        <div class="timeline-content card-hover">
+                            <h3>XX设计公司</h3>
+                            <p>视觉设计师，负责品牌设计与用户界面设计</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2022</div>
+                        <div class="timeline-content card-hover">
+                            <h3>华为终端技术有限公司</h3>
+                            <p>花粉俱乐部设计师，负责UI/UX设计与品牌视觉</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="skills">
-            <h2>专业技能</h2>
+        <section class="skills-section">
+            <h2 class="section-title">专业技能</h2>
+            
             <div class="skills-grid">
-                <div class="skill-item">
-                    <h3>UI/UX设计</h3>
-                    <p>用户界面设计、用户体验研究、交互设计</p>
+                <div class="skill-card">
+                    <h3><i class="fas fa-paint-brush"></i> UI/UX设计</h3>
+                    <ul class="skill-list">
+                        <li>用户界面设计</li>
+                        <li>用户体验研究</li>
+                        <li>交互设计</li>
+                        <li>原型设计</li>
+                    </ul>
                 </div>
-                <div class="skill-item">
-                    <h3>平面设计</h3>
-                    <p>品牌设计、海报设计、印刷品设计</p>
+                
+                <div class="skill-card">
+                    <h3><i class="fas fa-palette"></i> 平面设计</h3>
+                    <ul class="skill-list">
+                        <li>品牌设计</li>
+                        <li>海报设计</li>
+                        <li>印刷品设计</li>
+                        <li>排版设计</li>
+                    </ul>
                 </div>
-                <div class="skill-item">
-                    <h3>数字媒体</h3>
-                    <p>动态图形设计、基础前端开发</p>
+                
+                <div class="skill-card">
+                    <h3><i class="fas fa-code"></i> 数字媒体</h3>
+                    <ul class="skill-list">
+                        <li>动态图形设计</li>
+                        <li>基础前端开发</li>
+                        <li>响应式设计</li>
+                        <li>设计系统</li>
+                    </ul>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- 类似index.html的footer部分 -->
+    <footer>
+        <p>&copy; 2023 吴曦浩翔. 保留所有权利.</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-weibo"></i></a>
+            <a href="#"><i class="fab fa-behance"></i></a>
+            <a href="#"><i class="fab fa-dribbble"></i></a>
+        </div>
+    </footer>
+
+    <script src="/person-websit/js/main.js"></script>
 </body>
 </html>
