@@ -1100,3 +1100,13 @@ nav ul li a.active::after {
         display: block;
     }
 }
+
+nav ul {
+    transition: all 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+}
+
+nav ul.show {
+    max-height: 500px; /* 足够容纳所有菜单项 */
+}
