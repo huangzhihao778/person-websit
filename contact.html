@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系 | 吴曦浩翔</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>吴曦浩翔</h1>
+            <p>艺术设计师 | 华为终端技术有限公司</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="about.html">关于</a></li>
+                <li><a href="portfolio.html">作品集</a></li>
+                <li><a href="contact.html" class="active">联系</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-page">
+        <section class="contact-form-section">
+            <h2>与我联系</h2>
+            <p>如果您对我的作品感兴趣或有任何合作机会，欢迎通过以下方式联系我。</p>
+            
+            <form id="contact-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">姓名</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">邮箱</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">主题</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">留言内容</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn">发送消息</button>
+            </form>
+        </section>
+
+        <section class="contact-info">
+            <h2>其他联系方式</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <i class="icon-email"></i>
+                    <h3>邮箱</h3>
+                    <p>wuxihaoxiang@example.com</p>
+                </div>
+                
+                <div class="info-item">
+                    <i class="icon-phone"></i>
+                    <h3>电话</h3>
+                    <p>+86 138-XXXX-XXXX</p>
+                </div>
+                
+                <div class="info-item">
+                    <i class="icon-location"></i>
+                    <h3>地址</h3>
+                    <p>广东省深圳市</p>
+                </div>
+            </div>
+            
+            <div class="social-media">
+                <h3>社交媒体</h3>
+                <div class="social-links">
+                    <a href="#"><i class="icon-weibo"></i> 微博</a>
+                    <a href="#"><i class="icon-behance"></i> Behance</a>
+                    <a href="#"><i class="icon-dribbble"></i> Dribbble</a>
+                    <a href="#"><i class="icon-linkedin"></i> LinkedIn</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 吴曦浩翔. 保留所有权利.</p>
+        <div class="social-links">
+            <a href="#"><i class="icon-weibo"></i></a>
+            <a href="#"><i class="icon-behance"></i></a>
+            <a href="#"><i class="icon-dribbble"></i></a>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact-form.js"></script>
+</body>
+</html>
