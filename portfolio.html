@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- 类似index.html的head部分 -->
+    <title>作品集 | 吴曦浩翔</title>
+    <link rel="stylesheet" href="css/lightbox.css">
+</head>
+<body>
+    <!-- 类似index.html的header部分 -->
+
+    <main class="portfolio-page">
+        <section class="portfolio-filter">
+            <h2>我的作品</h2>
+            <div class="filter-options">
+                <button class="active" data-filter="all">全部</button>
+                <button data-filter="ui">UI设计</button>
+                <button data-filter="graphic">平面设计</button>
+                <button data-filter="huawei">华为项目</button>
+                <button data-filter="other">其他</button>
+            </div>
+        </section>
+
+        <section class="portfolio-grid">
+            <div class="portfolio-item" data-category="ui huawei">
+                <a href="images/works/work1-full.jpg" data-lightbox="portfolio" data-title="花粉俱乐部UI设计">
+                    <img src="images/works/work1-thumb.jpg" alt="花粉俱乐部UI设计">
+                    <div class="overlay">
+                        <h3>花粉俱乐部UI设计</h3>
+                        <p>华为终端项目</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="portfolio-item" data-category="graphic">
+                <a href="images/works/work2-full.jpg" data-lightbox="portfolio" data-title="品牌设计">
+                    <img src="images/works/work2-thumb.jpg" alt="品牌设计">
+                    <div class="overlay">
+                        <h3>XX品牌设计</h3>
+                        <p>品牌视觉系统</p>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- 更多作品项目... -->
+        </section>
+    </main>
+
+    <!-- 类似index.html的footer部分 -->
+    
+    <script src="js/lightbox.js"></script>
+    <script src="js/portfolio-filter.js"></script>
+</body>
+</html>
