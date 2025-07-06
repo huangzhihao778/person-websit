@@ -22,6 +22,11 @@ document.addEventListener('DOMContentLoaded', function() {
                         item.style.display = 'none';
                     }
                 }
+                
+                // 添加淡入动画
+                if (item.style.display === 'block') {
+                    item.style.animation = 'fadeIn 0.5s ease';
+                }
             });
         });
     });
