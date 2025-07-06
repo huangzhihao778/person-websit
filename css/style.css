@@ -1110,3 +1110,16 @@ nav ul {
 nav ul.show {
     max-height: 500px; /* 足够容纳所有菜单项 */
 }
+/* 添加过渡动画 */
+nav ul {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+nav ul.show {
+    max-height: 500px; /* 足够大的值容纳所有菜单项 */
+    opacity: 1;
+}
+
