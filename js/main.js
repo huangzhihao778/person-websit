@@ -9,7 +9,6 @@
  */
 
 document.addEventListener('DOMContentLoaded', function() {
-    initNavigation();
     // ==================== 1. 移动端菜单切换 ====================
     initializeMobileMenu();
     
