@@ -1,0 +1,354 @@
+/* 博客专用样式 */
+
+/* 博客首页样式 */
+.blog-page {
+    padding: 100px 5% 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blog-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.blog-header h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.blog-header p {
+    font-size: 1.2rem;
+    color: var(--text-light);
+}
+
+.blog-posts {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+.blog-post {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+}
+
+.post-thumbnail {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.post-thumbnail img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.blog-post:hover .post-thumbnail img {
+    transform: scale(1.05);
+}
+
+.post-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.post-content h2 {
+    font-size: 1.8rem;
+    margin: 1rem 0;
+}
+
+.post-content h2 a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.post-content h2 a:hover {
+    color: var(--primary-color);
+}
+
+.post-content p {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.pagination a {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.pagination a:hover, .pagination a.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* 单篇文章样式 */
+.single-post {
+    padding: 100px 5% 50px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.post-header {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.post-header h1 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    color: var(--secondary-color);
+}
+
+.post-thumbnail img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.post-content h2 {
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem;
+    color: var(--secondary-color);
+}
+
+.post-content h3 {
+    font-size: 1.4rem;
+    margin: 1.5rem 0 0.8rem;
+}
+
+.post-content p {
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.post-content ul, .post-content ol {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+}
+
+.post-content li {
+    margin-bottom: 0.5rem;
+}
+
+.design-sample {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.design-sample img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.caption {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-top: 0.5rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+}
+
+table th, table td {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background-color: #f5f5f5;
+}
+
+.post-tags {
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.post-tags span {
+    font-weight: 500;
+}
+
+.post-tags a {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.post-tags a:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* 文章导航 */
+.post-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 0;
+    padding: 2rem 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.prev-post, .next-post {
+    width: 48%;
+    text-decoration: none;
+}
+
+.prev-post {
+    text-align: left;
+}
+
+.next-post {
+    text-align: right;
+}
+
+.prev-post span, .next-post span {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.prev-post h3, .next-post h3 {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin: 0.5rem 0 0;
+}
+
+.prev-post:hover h3, .next-post:hover h3 {
+    color: var(--primary-color);
+}
+
+/* 评论区域 */
+.comments {
+    margin: 3rem 0;
+}
+
+.comments h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: var(--secondary-color);
+}
+
+.comment-form {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.comment-form h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.comment-list {
+    margin-top: 2rem;
+}
+
+.comment {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.comment-author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    object-fit: cover;
+}
+
+.author-info h4 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.comment-date {
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+.comment-content {
+    padding-left: 66px;
+}
+
+.comment-content p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .blog-post {
+        grid-template-columns: 1fr;
+    }
+    
+    .post-thumbnail img {
+        height: auto;
+    }
+    
+    .post-navigation {
+        flex-direction: column;
+    }
+    
+    .prev-post, .next-post {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    .comment-content {
+        padding-left: 0;
+    }
+}
