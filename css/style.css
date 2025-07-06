@@ -382,12 +382,15 @@ nav ul li a.active::after {
 
 /* ==================== 移动端菜单按钮 ==================== */
 .menu-btn {
-    display: none;
+    display: none; /* 默认隐藏，只在移动端显示 */
     background: none;
     border: none;
     padding: 10px;
     cursor: pointer;
     z-index: 1001;
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
 .menu-btn span {
@@ -399,6 +402,7 @@ nav ul li a.active::after {
     transition: all 0.3s ease;
 }
 
+/* 菜单按钮激活状态 */
 .menu-btn.active span:nth-child(1) {
     transform: translateY(7px) rotate(45deg);
 }
@@ -992,7 +996,6 @@ nav ul {
 
 nav ul li {
     margin-left: 2rem;
-    position: relative;
 }
 
 nav ul li a {
@@ -1002,6 +1005,49 @@ nav ul li a {
     transition: all 0.3s ease;
     padding: 0.5rem 0;
     position: relative;
+}
+
+/* 移动端样式 */
+@media (max-width: 768px) {
+    /* 显示菜单按钮 */
+    .menu-btn {
+        display: block;
+    }
+    
+    /* 导航菜单初始隐藏 */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 1rem;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+    
+    /* 显示菜单 */
+    nav ul.show {
+        display: flex;
+    }
+    
+    /* 调整菜单项间距 */
+    nav ul li {
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+    
+    /* 调整header布局 */
+    header {
+        position: relative;
+        padding: 1rem;
+    }
+    
+    .logo {
+        text-align: center;
+    }
 }
 
 /* 当前活动页签样式 */
