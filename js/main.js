@@ -26,8 +26,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // ==================== 6. 返回顶部按钮 ====================
     setupBackToTopButton();
-
-    setActiveNavLink();
 });
 
 /**
