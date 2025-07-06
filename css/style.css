@@ -1,27 +1,19 @@
-/* ========== 基础变量定义 ========== */
+/* 基础样式 */
 :root {
-    --primary-color: #e74c3c;
+    --primary-color: #e74c3c; /* 主色调，可根据个人品牌调整 */
     --secondary-color: #2c3e50;
     --light-color: #ecf0f1;
     --dark-color: #333;
     --text-color: #333;
     --text-light: #777;
-    --shadow: 0 5px 15px rgba(0,0,0,0.1);
-    --transition: all 0.3s ease;
-}
-
-/* ========== 基础样式 ========== */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
 }
 
 /* 头部样式 */
@@ -36,15 +28,7 @@ header {
     width: 90%;
     z-index: 1000;
 }
-a {
-    text-decoration: none;
-    color: inherit;
-}
 
-img {
-    max-width: 100%;
-    height: auto;
-}
 .logo h1 {
     margin: 0;
     font-size: 1.5rem;
@@ -398,15 +382,12 @@ nav ul li a.active::after {
 
 /* ==================== 移动端菜单按钮 ==================== */
 .menu-btn {
-    display: none; /* 默认隐藏，只在移动端显示 */
+    display: none;
     background: none;
     border: none;
     padding: 10px;
     cursor: pointer;
     z-index: 1001;
-    position: absolute;
-    top: 20px;
-    right: 20px;
 }
 
 .menu-btn span {
@@ -418,7 +399,6 @@ nav ul li a.active::after {
     transition: all 0.3s ease;
 }
 
-/* 菜单按钮激活状态 */
 .menu-btn.active span:nth-child(1) {
     transform: translateY(7px) rotate(45deg);
 }
@@ -1001,131 +981,4 @@ nav ul li a.active::after {
     .skills-grid {
         grid-template-columns: 1fr;
     }
-}
-/* 导航菜单样式 */
-nav ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    margin-left: 2rem;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 500;
-    transition: all 0.3s ease;
-    padding: 0.5rem 0;
-    position: relative;
-}
-
-/* 移动端样式 */
-@media (max-width: 768px) {
-    /* 显示菜单按钮 */
-    .menu-btn {
-        display: block;
-    }
-    
-    /* 导航菜单初始隐藏 */
-    nav ul {
-        display: none;
-        flex-direction: column;
-        position: fixed;
-        top: 80px;
-        left: 0;
-        right: 0;
-        background: white;
-        padding: 1rem;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-        z-index: 1000;
-    }
-    
-    /* 显示菜单 */
-    nav ul.show {
-        display: flex;
-    }
-    
-    /* 调整菜单项间距 */
-    nav ul li {
-        margin: 0.5rem 0;
-        text-align: center;
-    }
-    
-    /* 调整header布局 */
-    header {
-        position: relative;
-        padding: 1rem;
-    }
-    
-    .logo {
-        text-align: center;
-    }
-}
-
-/* 当前活动页签样式 */
-nav ul li a.active {
-    color: var(--primary-color);
-    font-weight: 600;
-}
-
-/* 页签下划线效果 */
-nav ul li a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--primary-color);
-    transition: width 0.3s ease;
-}
-
-nav ul li a:hover::after,
-nav ul li a.active::after {
-    width: 100%;
-}
-
-/* 移动端导航菜单样式 */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        background-color: white;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        padding: 1rem;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-        display: none;
-    }
-    
-    nav ul.show {
-        display: flex;
-    }
-    
-    nav ul li {
-        margin: 0.5rem 0;
-    }
-    
-    .menu-btn {
-        display: block;
-    }
-}
-
-/* 添加过渡动画 */
-nav ul {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease, opacity 0.3s ease;
-    opacity: 0;
-}
-
-nav ul.show {
-    max-height: 500px; /* 足够大的值容纳所有菜单项 */
-    opacity: 1;
 }
