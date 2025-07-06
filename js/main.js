@@ -9,6 +9,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', function() {
+    initNavigation();
     // ==================== 1. 移动端菜单切换 ====================
     initializeMobileMenu();
     
@@ -395,3 +396,72 @@ function initializeMobileMenu() {
         }
     });
 }
+/**
+ * 导航菜单初始化
+ */
+function initNavigation() {
+    // 创建移动端菜单按钮
+    const menuBtn = document.createElement('button');
+    menuBtn.className = 'menu-btn';
+    menuBtn.innerHTML = '<span></span><span></span><span></span>';
+    menuBtn.setAttribute('aria-label', '菜单');
+    document.querySelector('header').appendChild(menuBtn);
+    
+    const navList = document.querySelector('nav ul');
+    
+    // 菜单按钮点击事件
+    menuBtn.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navList.classList.toggle('show');
+    });
+    
+    // 点击文档其他区域关闭菜单
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('nav') && !e.target.closest('.menu-btn')) {
+            menuBtn.classList.remove('active');
+            navList.classList.remove('show');
+        }
+    });
+    
+    // 菜单项点击后关闭菜单
+    navList.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                menuBtn.classList.remove('active');
+                navList.classList.remove('show');
+            }
+        });
+    });
+    
+    // 窗口大小改变时重置菜单
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            menuBtn.classList.remove('active');
+            navList.classList.remove('show');
+        }
+    });
+    
+    // 设置当前活动页签
+    setActiveNav();
+}
+
+/**
+ * 设置当前活动页签
+ */
+function setActiveNav() {
+    const currentPage = location.pathname.split('/').pop().replace('.html', '');
+    const navLinks = document.querySelectorAll('nav a');
+    
+    navLinks.forEach(link => {
+        const linkPage = link.getAttribute('href').replace('.html', '');
+        
+        if ((currentPage === '' && linkPage === 'index') || 
+            linkPage === currentPage ||
+            (currentPage === 'index' && linkPage === '')) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+}
+
