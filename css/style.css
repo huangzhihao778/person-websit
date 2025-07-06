@@ -703,3 +703,62 @@ nav ul li a.active::after {
         padding: 80px 2% 30px;
     }
 }
+/* ========== 动画效果 ========== */
+/* 淡入动画 */
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+/* 元素浮现效果 */
+.fade-in {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+/* 按钮悬停效果 */
+.btn-hover {
+    transition: all 0.3s ease;
+}
+.btn-hover:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* 图片缩放效果 */
+.img-zoom {
+    transition: transform 0.3s ease;
+}
+.img-zoom:hover {
+    transform: scale(1.03);
+}
+
+/* 表单成功消息动画 */
+.form-success {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    animation: fadeIn 0.3s ease;
+    opacity: 0;
+    transform: translateY(10px);
+    animation-fill-mode: forwards;
+}
+
+/* 卡片悬停效果 */
+.card-hover {
+    transition: all 0.3s ease;
+}
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
